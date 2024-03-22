@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	background-color: #f6a700;
+	margin-left: auto;
+	width: 100%;
+	height: 100%;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: justify;
+}
+header {
+	width: 100%;
+	position: relative;
+	background-color: gray;
+	border-radius: 20px 0 20px 0;
+	color: aliceblue;
+	height: 50px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr; /* Un solo column para empezar */
+	gap: 10px; /* Espacio entre elementos */
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	grid-column: 1;
+	/* background-color: aqua; */
+	border: 2px solid black;
+}
+
+aside {
+	width: 100%;
+	height: 100%;
+	grid-column: 1;
+	/* background-color: coral; */
+	border: 2px solid black;
+}
+
+footer {
+	width: 100%;
+	/* background-color: blue; */
+	border: 2px solid black;
+}
+
+main #h1,
+#h2 {
+	text-align: center;
+	font-size: 50px;
+	margin: 0;
+	font-family: "Tilt Prism", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
+	font-variation-settings: "XROT" 0, "YROT" 0;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: 900;
+}
+
+label {
+	display: flex;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 1;
+}
+
+input {
+	display: none;
+}
+
+input:checked + nav {
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px 0 20px 0;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 20px;
+	background-color: gray;
+	transform: translateY(0);
+	transition: all 0.5s ease;
+}
+
+input:not(:checked) + nav {
+	position: absolute;
+	transform: translateY(-100%);
+	transition: all 0.5s ease;
+	opacity: 0;
+}
+
+a {
+	color: purple;
+	text-decoration: none;
+	font-family: "Rochester", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+}
+a:hover {
+	color: darkblue;
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		position: unset;
+	}
+
+	label {
+		display: none;
+	}
+
+	input:not(:checked) + nav {
+		position: relative;
+		transform: translateY(0);
+		opacity: 1;
+		display: flex;
+		justify-content: space-evenly;
+		top: 10px;
+	}
+	.container {
+		grid-template-columns: 5fr 1fr; /* Dos columnas para mostrar el main y el aside juntos */
+	}
+	main {
+		grid-column: 1 / span 1; /* Main en la primera columna */
+	}
+	aside {
+		display: flex;
+		grid-column: 2 / span 1; /* Aside en la segunda columna */
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	input:not(:checked) + nav {
+		justify-content: end;
+		gap: 20px;
+		padding-right: 20px;
+	}
+}
