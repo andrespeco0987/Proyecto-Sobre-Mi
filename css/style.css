@@ -60,11 +60,28 @@ main {
 	justify-content: space-around;
 }
 
+.contenedor2 {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
 .perfil {
 	border-radius: 20px;
 	width: 150px;
 	height: 150px;
 	border: 2px solid black;
+}
+
+.vid1 {
+	width: 150px;
+	height: 200px;
+}
+
+.vid2 {
+	width: 200px;
+	height: 150px;
 }
 
 aside {
@@ -77,10 +94,17 @@ aside {
 }
 
 footer {
+	position: relative;
 	width: 100%;
+	top: 10px;
 	/* background-color: blue; */
 	border: 2px solid black;
 	border-radius: 20px 0 20px 0;
+}
+
+.imgredes {
+	width: 60px;
+	height: 55px;
 }
 
 main #h1,
@@ -95,6 +119,26 @@ main #h1,
 	font-variation-settings: "XROT" 0, "YROT" 0;
 }
 
+.h3 {
+	text-align: center;
+	font-family: "Tilt Prism", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 1000;
+	font-style: normal;
+	font-variation-settings: "XROT" 0, "YROT" 0;
+	color: crimson;
+	font-size: 20px;
+}
+
+.h4 {
+	display: flex;
+	font-family: var(--fuente-parrafos);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 22px;
+	color: darkgreen;
+}
+
 .subti {
 	text-align: center;
 	font-family: "Tilt Prism", sans-serif;
@@ -103,6 +147,20 @@ main #h1,
 	font-style: normal;
 	font-variation-settings: "XROT" 0, "YROT" 0;
 	color: darkslateblue;
+}
+
+.listre {
+	font-family: var(--fuente-parrafos);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 19px;
+}
+
+.listre2 {
+	font-family: var(--fuente-parrafos);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
 }
 
 p {
@@ -117,6 +175,15 @@ li {
 	font-weight: 400;
 	font-style: normal;
 	font-size: 20px;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #000; /* O el color que desees */
+	margin: 1em 0; /* O ajustar el margen según tus necesidades */
+	padding: 0;
 }
 
 label {
@@ -191,10 +258,46 @@ a:hover {
 		width: 200px;
 		height: 200px;
 	}
+	.vid1 {
+		width: 200px;
+		height: 250px;
+	}
+	.vid2 {
+		width: 250px;
+		height: 200px;
+	}
 	aside {
 		display: flex;
 		grid-column: 2 / span 1; /* Aside en la segunda columna */
 		width: 100%;
+		flex-direction: column;
+	}
+	.contenedor2 {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: start;
+		align-content: start;
+	}
+	.h3 {
+		font-size: 25px;
+	}
+	.h4 {
+		position: relative;
+		left: -30px;
+	}
+	.listre {
+		position: relative;
+		top: -20px;
+		left: -15px;
+	}
+	.listre2 {
+		position: relative;
+		left: -15px;
+	}
+	.imgredes {
+		width: 110px;
+		height: 100px;
 	}
 }
 
@@ -206,6 +309,14 @@ a:hover {
 	}
 	.perfil {
 		width: 250px;
+		height: 250px;
+	}
+	.vid1 {
+		width: 250px;
+		height: 300px;
+	}
+	.vid2 {
+		width: 300px;
 		height: 250px;
 	}
 }
