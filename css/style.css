@@ -3,6 +3,11 @@
 *::after {
 	box-sizing: border-box;
 }
+
+:root {
+	--fuente-parrafos: "Rochester", cursive;
+}
+
 body {
 	background-color: #f6a700;
 	margin-left: auto;
@@ -11,7 +16,7 @@ body {
 	margin-right: auto;
 	display: flex;
 	flex-wrap: wrap;
-	text-align: justify;
+	text-align: center;
 	padding: 3px;
 }
 header {
@@ -52,27 +57,13 @@ main {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-around;
 }
 
 .perfil {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	border-radius: 20px;
-	width: 250px;
-	height: 250px;
-	border: 2px solid black;
-}
-
-.ciudad {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 20px;
-	width: 250px;
-	height: 250px;
+	width: 150px;
+	height: 150px;
 	border: 2px solid black;
 }
 
@@ -111,12 +102,21 @@ main #h1,
 	font-weight: 900;
 	font-style: normal;
 	font-variation-settings: "XROT" 0, "YROT" 0;
+	color: darkslateblue;
 }
 
 p {
-	font-family: Arial, Helvetica, sans-serif;
-	font-style: italic;
-	font-weight: 900;
+	font-family: var(--fuente-parrafos);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 30px;
+}
+
+li {
+	font-family: var(--fuente-parrafos);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
 }
 
 label {
@@ -187,6 +187,10 @@ a:hover {
 	main {
 		grid-column: 1 / span 1; /* Main en la primera columna */
 	}
+	.perfil {
+		width: 200px;
+		height: 200px;
+	}
 	aside {
 		display: flex;
 		grid-column: 2 / span 1; /* Aside en la segunda columna */
@@ -199,5 +203,9 @@ a:hover {
 		justify-content: end;
 		gap: 20px;
 		padding-right: 20px;
+	}
+	.perfil {
+		width: 250px;
+		height: 250px;
 	}
 }
